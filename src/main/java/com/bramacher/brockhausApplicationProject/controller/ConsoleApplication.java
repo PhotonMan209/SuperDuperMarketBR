@@ -29,8 +29,8 @@ public class ConsoleApplication implements CommandLineRunner {
         this.qualityDegradationService = qualityDegradationService;
 
         // Initialize the command map
-        commandMap.put(CommandConstants.EXIT, new ExitCommandInterface());
-        commandMap.put(CommandConstants.HELP, new HelpCommandInterface());
+        commandMap.put(CommandConstants.EXIT, new ExitCommand());
+        commandMap.put(CommandConstants.HELP, new HelpCommand());
         commandMap.put(CommandConstants.DISPLAYPRODUCTS, new DisplayProducts(productService));
         commandMap.put(CommandConstants.DISPLAYPRODUCTSEXPECTED, new DisplayProductsExpected(productService, qualityDegradationService));
     }

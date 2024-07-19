@@ -5,7 +5,7 @@ import com.bramacher.brockhausApplicationProject.model.entity.superDuperMarket.P
 import com.bramacher.brockhausApplicationProject.model.entity.superDuperMarket.ProductTypeEntity;
 import com.bramacher.brockhausApplicationProject.model.entity.superDuperMarket.QualityDegradationRuleEntity;
 import com.bramacher.brockhausApplicationProject.repository.h2.ProductTypeRepository;
-import com.bramacher.brockhausApplicationProject.repository.h2.QualityDegradationRepository;
+import com.bramacher.brockhausApplicationProject.repository.h2.QualityDegradationRuleRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -17,11 +17,11 @@ import java.util.Map;
 @Service
 public class QualityDegradationService implements EntityServiceInterface<QualityDegradationRuleEntity> {
 
-    private final QualityDegradationRepository qualityDegradationRepository;
+    private final QualityDegradationRuleRepository qualityDegradationRuleRepository;
     private final ProductTypeRepository productTypeRepository;
 
-    public QualityDegradationService(QualityDegradationRepository qualityDegradationRepository, ProductTypeRepository productTypeRepository) {
-        this.qualityDegradationRepository = qualityDegradationRepository;
+    public QualityDegradationService(QualityDegradationRuleRepository qualityDegradationRuleRepository, ProductTypeRepository productTypeRepository) {
+        this.qualityDegradationRuleRepository = qualityDegradationRuleRepository;
         this.productTypeRepository = productTypeRepository;
     }
 
@@ -59,7 +59,7 @@ public class QualityDegradationService implements EntityServiceInterface<Quality
                 qualityDegradations.add(qualityDegradation);
             }
             // Save quality degradations to database
-            qualityDegradationRepository.saveAll(qualityDegradations);
+            qualityDegradationRuleRepository.saveAll(qualityDegradations);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -111,6 +111,6 @@ public class QualityDegradationService implements EntityServiceInterface<Quality
 
     //Repositories should only be accessed by the entity service layer
     public QualityDegradationRuleEntity getByProductEntityName(String name) {
-        return qualityDegradationRepository.findQualityDegradationRuleEntityByName(name);
+        return qualityDegradationRuleRepository.findQualityDegradationRuleEntityByName(name);
     }
 }

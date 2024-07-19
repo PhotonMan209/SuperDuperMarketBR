@@ -2,7 +2,7 @@ package com.bramacher.brockhausApplicationProject.controller.command;
 
 import com.bramacher.brockhausApplicationProject.model.constants.CommandConstants;
 
-public class HelpCommandInterface implements CommandInterface {
+public class HelpCommand implements CommandInterface {
     @Override
     public void execute(String[] args) {
         System.out.println("Available commands:");
