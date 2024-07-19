@@ -93,10 +93,7 @@ public class QualityDegradationService implements EntityServiceInterface<Quality
         return modifiedProducts;
     }
 
-    public QualityDegradationRuleEntity getByProductEntityName(String name) {
-        return qualityDegradationRepository.findQualityDegradationRuleEntityByName(name);
-    }
-
+    //Implementation of additional requirements.
     private ProductEntity applySpecialRules(ProductEntity product) {
         switch (product.getProductTypeEntity().getName()) {
             //Wine
@@ -110,5 +107,10 @@ public class QualityDegradationService implements EntityServiceInterface<Quality
             }
         }
         return product;
+    }
+
+    //Repositories should only be accessed by the entity service layer
+    public QualityDegradationRuleEntity getByProductEntityName(String name) {
+        return qualityDegradationRepository.findQualityDegradationRuleEntityByName(name);
     }
 }

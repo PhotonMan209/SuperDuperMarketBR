@@ -32,7 +32,7 @@ public class DisplayProductsExpected implements CommandInterface {
                 return;
             }
         }
-
+        //Output of following weeks
         System.out.println("Today");
         List<ProductEntity> productEntityList = productService.getAllProducts();
         EntityDisplay.displayEntity(productEntityList);

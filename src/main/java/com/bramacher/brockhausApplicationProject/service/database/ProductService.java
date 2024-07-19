@@ -14,6 +14,7 @@ import java.util.List;
 
 @Service
 public class ProductService implements EntityServiceInterface<ProductEntity> {
+    //Services with the EntityName are mainly for database actions. More complex logic should be in other services
 
     private final ProductRepository productRepository;
     private final ProductTypeRepository productTypeRepository;
@@ -59,7 +60,6 @@ public class ProductService implements EntityServiceInterface<ProductEntity> {
                 products.add(product);
             }
 
-
             productRepository.saveAll(products);
 
         } catch (IOException e) {
@@ -67,6 +67,7 @@ public class ProductService implements EntityServiceInterface<ProductEntity> {
         }
     }
 
+    //Repositories should only be accessed by the entity service layer
     public List<ProductEntity> getAllProducts() {
         return productRepository.findAll();
     }

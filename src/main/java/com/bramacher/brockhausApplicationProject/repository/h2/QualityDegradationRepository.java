@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface QualityDegradationRepository extends JpaRepository<QualityDegradationRuleEntity, Long> {
-
+    //easy Hibernate query. More complex Queries require @Query etc.
     QualityDegradationRuleEntity findQualityDegradationRuleEntityByName (String name);
 }

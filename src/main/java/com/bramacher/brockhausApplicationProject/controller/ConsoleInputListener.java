@@ -5,7 +5,7 @@ import reactor.core.publisher.Flux;
 
 @Component
 public class ConsoleInputListener {
-
+    //Listen for console input
     public Flux<String> listenToConsoleInput() {
         return Flux.create(sink -> {
             new Thread(() -> {

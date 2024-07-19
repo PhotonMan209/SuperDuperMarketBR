@@ -10,7 +10,7 @@ import java.util.concurrent.Executor;
 @Configuration
 @EnableAsync
 public class AsyncConfig {
-
+    //Not in use, would be used if the updates would roll in daily. Async so the console interaction would not be disturbed
     @Bean(name = "taskExecutor")
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

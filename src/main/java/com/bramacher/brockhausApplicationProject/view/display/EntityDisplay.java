@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+//Display of Generics and maximum modularity for displaying other types of entities for easier user navigation if this would be required.
 public class EntityDisplay {
 
     public static void displayEntity(List<?> entityList) {

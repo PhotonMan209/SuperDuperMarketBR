@@ -35,6 +35,7 @@ public class ConsoleApplication implements CommandLineRunner {
         commandMap.put(CommandConstants.DISPLAYPRODUCTSEXPECTED, new DisplayProductsExpected(productService, qualityDegradationService));
     }
 
+    //main Running Application
     @Override
     public void run(String... args) {
         scheduler.performUpdates();
@@ -46,7 +47,7 @@ public class ConsoleApplication implements CommandLineRunner {
                     CommandInterface commandInterface = null;
                     String commandName = null;
 
-                    // Find the longest matching command
+                    // Find the longest matching command. Not looking for single words, because a User is more familiar with separated words
                     for (int i = inputParts.length; i > 0; i--) {
                         StringBuilder potentialCommandBuilder = new StringBuilder();
                         for (int j = 0; j < i; j++) {

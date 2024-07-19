@@ -24,6 +24,7 @@ public class InitialSetupService {
         this.qualityDegradationService = qualityDegradationService;
     }
 
+    //Hardcoded. This could be done modular, but for times sake and the scope of this assignment, the files and directories are hardcoded
     @PostConstruct
     public void readInInitialCsvData() {
         loadCsvData("/csv/InitialProductTypes.csv", productTypeService::readAndSaveCsvData);
@@ -45,6 +46,7 @@ public class InitialSetupService {
         }
     }
 
+    //For easier readability in the method: readInInitialCsvData
     @FunctionalInterface
     private interface CsvDataConsumer {
         void readAndSaveCsvData(BufferedReader reader) throws IOException;
