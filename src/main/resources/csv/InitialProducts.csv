@@ -1,0 +1,8 @@
+name    , productTypeEntity , qualityInPercent , minimumQualityInPercent ,markedForRemoval, expireDate , basePrice , lastModifiedManual , lastModifiedAutomatic
+Milk    , Dairy             , 100              , 50                     ,0                  , 2024-12-31 , 1.99      , 2024-07-16         , 2024-07-16
+Eggs    , Dairy             , 98               , 60                     ,0                  , 2024-12-31 , 2.49      , 2024-07-16         , 2024-07-16
+Bread   , Bakery            , 100              , 50                     ,0                  , 2024-07-16 , 2.29      , 2024-07-16         , 2024-07-16
+Apple   , Fruits            , 95               , 50                     ,0                  , 2024-07-16 , 0.89      , 2024-07-16         , 2024-07-16
+Banana  , Fruits            , 50               , 92                     ,0                  , 2024-07-16 , 0.59      , 2024-07-16         , 2024-07-16
+Cheese  , Cheese            , 50               , 30                     ,0                  , 2024-10-15 , 4.99      , 2024-07-16         , 2024-07-16
+Wine    , Wine              , 10               , 1                      ,0                  , 2100-01-01 , 9.99      , 2024-07-16         , 2024-07-16

@@ -1,0 +1,7 @@
+name        , productTypeEntity_id , degradationInPercentPoints , degradationAfterDays
+Dairy       , 1                    , 2                          , 2
+Bakery      , 2                    , 5                          , 1
+Fruits      , 3                    , 1                          , 2
+Beverages   , 4                    , 0                          , 1
+Cheese      , 5                    , 1                          , 1
+Wine        , 6                    , -1                         , 10
